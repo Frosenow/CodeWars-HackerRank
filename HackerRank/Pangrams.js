@@ -30,13 +30,13 @@ function readLine() {
  */
 
 function pangrams(s) {
-    const alphabet = [];
-    s.replace(/ /g, '').toLowerCase().split('').forEach(char => {
-        if(!(alphabet.includes(char))){
-            alphabet.push(char)
+    let chars = 0;
+    for(let i = 'a'.charCodeAt(0); i <= 'z'.charCodeAt(0); i++){
+        if(s.toLowerCase().includes(String.fromCharCode(i))){
+            chars++; 
         }
-    })
-    return alphabet.length == 26 ? 'pangram' : 'not pangram'
+    }
+    return chars === 26 ? 'pangram' : 'not pangram'
 }
 
 function main() {
