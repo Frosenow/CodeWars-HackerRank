@@ -1,7 +1,5 @@
 function formatDuration (time) {
   if(time == 0) return 'now'
-  let years, days, hours, minutes, seconds; 
-  years = days = hours = minutes = seconds = 0;
   
   const clock = { 
     year: 0,
