@@ -33,12 +33,9 @@ function minimumAbsoluteDifference(arr) {
     arr.sort((a, b) => Math.abs(a) - Math.abs(b))
     let min = Number.MAX_SAFE_INTEGER; 
     for(let i = 0; i < arr.length - 1; i++){
-        let difference = Math.abs(arr[i + 1] - arr[i])
-        if(difference < min)
-            min = difference; 
+        min = Math.min(min, Math.abs(arr[i] - arr[i+1]))
     }
     return min; 
-
 }
 
 function main() {
